@@ -1,0 +1,77 @@
+body{
+    font-family: Helvetica;
+}
+
+.title{
+    color: #6200EE;
+    text-align: center;
+}
+.empty{
+    text-align: center;
+}
+
+.app-container{
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+}
+.form-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.input-field{
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.add-button{
+    background-color: #05f8e0;
+    border: none;
+    border-radius: 4px;
+    color: #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+}
+.add-button:hover{
+background-color: #06cebd;
+
+}
+
+.todo-list{
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item{
+    background-color: #fafafa;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+
+}
+
+.delete-buttom{
+background-color: #cf6679 ;
+border: none;
+border-radius: 4px;
+padding: 5px 10px;
+color: #FFF;
+cursor: pointer;
+transition: all 0.2s ease;
+
+}
+.delete-buttom:hover {
+    background: darkred;
+    
+  }
