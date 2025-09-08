@@ -71,4 +71,25 @@ describe('TodoApp Component', () => {
 
         expect(screen.getByText('não ha tarefas')).toBeInTheDocument();
     });
+
+    it('deve permitir ao usuário marcar uma tarefa como concluída e desmarcá-la', async () => {
+    const user = userEvent.setup();
+    render(<TodoApp />);
+
+    // Adiciona uma tarefa para o teste
+    const inputElement = screen.getByPlaceholderText('adicione uma tarefa');
+    await user.type(inputElement, 'Pagar a conta de luz');
+    await user.click(screen.getByRole('button', { name: /adicionar/i }));
+
+    const taskText = screen.getByText('Pagar a conta de luz');
+    const taskCheckbox = within(taskText.closest('li')).getByRole('checkbox');
+
+    // 1. Marcar como concluída
+    await user.click(taskCheckbox);
+    expect(taskText).toHaveStyle('text-decoration: line-through');
+
+    // 2. Desmarcar a tarefa
+    await user.click(taskCheckbox);
+    expect(taskText).not.toHaveStyle('text-decoration: line-through');
+});
 });
