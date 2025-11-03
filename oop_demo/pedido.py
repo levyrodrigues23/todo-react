@@ -1,11 +1,5 @@
-from typing import List, Dict
-
-from .cliente import Cliente
-from .produto import Produto
-
-
 class ItemPedido:
-    def __init__(self, produto: Produto, quantidade: int = 1):
+    def __init__(self, produto, quantidade=1):
         self.produto = produto
         self.quantidade = quantidade
 
@@ -14,7 +8,7 @@ class ItemPedido:
 
 
 class Pedido:
-    def __init__(self, id: int, cliente: Cliente, itens: List[ItemPedido] = []):
+    def __init__(self, id, cliente, itens=[]):
         self.id = id
         self.cliente = cliente
         self.itens = itens
@@ -24,11 +18,10 @@ class Pedido:
         total = 0.0
         for it in self.itens:
             total += it.subtotal()
-        print(f"DEBUG total_bruto: {total}")
         return total
 
-    def fechar(self) -> Dict[str, object]:
-        erros: List[str] = []
+    def fechar(self):
+        erros = []
         if not self.cliente.email_valido():
             erros.append("Email inválido")
         if not self.itens:
