@@ -1,75 +1,28 @@
-# todo-react
-# Todo React
+# Dev Mentor — Teste de Usabilidade (Python OOP)
 
-Este é um projeto de lista de tarefas (Todo List) desenvolvido com React. Ele tem como objetivo oferecer uma interface simples e intuitiva para organizar e gerenciar suas tarefas diárias.
+Este repositório contém um mini-projeto em Python orientado a objetos (pasta `oop_demo/`) com code smells intencionais, para que participantes usem o Dev Mentor apenas como tutor (sem editar código).
 
-## Funcionalidades
+## Como usar
+- Abra no VS Code com a extensão Dev Mentor instalada.
+- Explore `oop_demo/models.py` (principal) e `oop_demo/main.py` (exemplo). Não edite código durante o teste.
+- (Opcional) Execute `python oop_demo/main.py` apenas para observar a saída.
 
-- Adicionar novas tarefas
-- Marcar tarefas como concluídas
-- Remover tarefas
-- Visualizar lista de tarefas pendentes e concluídas
-- Interface responsiva e moderna
+## Documentos do teste
+- Proposta simples: `docs/PROPOSTA_PROJETO_SIMPLIFICADO.md`
+- Plano de teste: `docs/PLANO_TESTE_USABILIDADE_DEV_MENTOR.md`
+- Folha para participantes (impressão): `docs/FOLHA_DE_TESTE_PARA_USUARIOS.md`
 
-## Tecnologias Utilizadas
+Para gerar PDF, abra os arquivos no VS Code e use “Imprimir → Salvar como PDF” ou uma extensão de Markdown → PDF.
 
-- [React](https://react.dev/)
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-
-## Como Executar o Projeto
-
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/levyrodrigues23/todo-react.git
-   ```
-
-2. Acesse o diretório do projeto:
-
-   ```bash
-   cd todo-react
-   ```
-
-3. Instale as dependências:
-
-   ```bash
-   npm install
-   ```
-
-4. Inicie o servidor de desenvolvimento:
-
-   ```bash
-   npm start
-   ```
-
-5. Abra [http://localhost:3000](http://localhost:3000) no navegador para visualizar o app.
-
-## Estrutura de Pastas
-
+## Estrutura
 ```
-todo-react/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   ├── App.js
-│   ├── index.js
-│   └── styles/
-├── package.json
-├── README.md
+oop_demo/
+  ├─ models.py   # classes OOP com smells: God Object, método longo, erros inconsistentes, etc.
+  └─ main.py     # semente e exemplo de uso (opcional)
+docs/
+  ├─ PROPOSTA_PROJETO_SIMPLIFICADO.md
+  ├─ PLANO_TESTE_USABILIDADE_DEV_MENTOR.md
+  └─ FOLHA_DE_TESTE_PARA_USUARIOS.md
 ```
 
-## Contribuição
 
-Contribuições são bem-vindas! Fique à vontade para abrir issues ou enviar pull requests.
-
-## Licença
-
-Este projeto está sob a licença MIT.
-
----
-
-Feito com 💻 por [levyrodrigues23](https://github.com/levyrodrigues23) e [Nelson Felipe](https://github.com/NelsonFelipe)
-
-pra testes!!!
